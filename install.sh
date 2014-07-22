@@ -45,3 +45,10 @@ ln -s /mnt/data/postgres/main main
 
 echo "- restarting postgres"
 /etc/init.d/postgresql start
+
+echo "- installing imposm3"
+# this will have to change, I don't want to figure out building go applications right now
+curl -O http://imposm.org/static/rel/imposm3-0.1dev-20140702-ced9f92-linux-x86-64.tar.gz
+tar -zxvf imposm3-0.1dev-20140702-ced9f92-linux-x86-64.tar.gz
+cd ~/mission-imposm/imposm3-0.1dev-20140702-ced9f92-linux-x86-64
+# ./imposm3 is good to go
