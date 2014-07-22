@@ -10,4 +10,4 @@ Quick setup of an imposm3 database
 - `cd mission-imposm`
 - `sudo make install`
 - download your pbf
-- `./imposm3 import -connection postgis://postgres@localhost/osm -mapping mapping.json -read {your pbf} -write`
+- `./imposm3 import -connection postgis://postgres@localhost/osm -mapping mapping.json -read dc-baltimore.osm.pbf -write -deployproduction -appendcache`
