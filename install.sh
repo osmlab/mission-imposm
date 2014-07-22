@@ -13,6 +13,8 @@ sudo -u postgres psql -U postgres -d template_postgis -c "GRANT ALL ON geometry_
 sudo -u postgres psql -U postgres -d template_postgis -c "GRANT ALL ON geography_columns TO PUBLIC;"
 sudo -u postgres psql -U postgres -d template_postgis -c "GRANT ALL ON spatial_ref_sys TO PUBLIC;"
 
+sudo -u postgres createdb -U postgres -T template_postgis -E UTF8 osm
+
 echo "- setting permissions"
 sh -c 'echo "
 local all postgres trust
